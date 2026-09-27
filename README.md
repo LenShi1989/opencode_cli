@@ -82,3 +82,15 @@ opencode uninstall --keep-data                    # 保留資料
 | /exit      | 離開                    |
 | /quit      | 離開                    |
 | /q         | 離開                    |
+
+---
+
+## $PowerShell 即時追蹤最新 Log
+
+這樣會一直顯示新增的 Log:
+
+```sh
+Get-Content (Get-ChildItem "$env:USERPROFILE\.local\share\opencode\log" |
+    Sort-Object LastWriteTime -Descending |
+    Select-Object -First 1).FullName -Wait
+```
