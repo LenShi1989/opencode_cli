@@ -7,6 +7,12 @@ curl -fsSL https://opencode.ai/install | bash
 npm i -g opencode-ai
 ```
 
+# opencode quota 查看流量
+
+```sh
+npx @slkiser/opencode-quota init
+```
+
 ## OpenCode 指令大全
 
 ## 最常用指令
@@ -21,6 +27,7 @@ opencode --continue                               # 繼續上次工作
 opencode run "分析這個專案"                        # 非互動執行
 opencode mini                                     # 啟動簡易介面
 opencode upgrade                                  # 更新 OpenCode
+opencode stats                                    # 查看token使用量
 
 opencode session list                             # Session 管理
 opencode session list --max-count 20              # 限制數量
@@ -82,6 +89,7 @@ opencode uninstall --keep-data                    # 保留資料
 | /exit      | 離開                    |
 | /quit      | 離開                    |
 | /q         | 離開                    |
+| /quota     | 查看token使用量         |
 
 ---
 
